@@ -68,6 +68,15 @@
 </head>
 <body>
 <div id="root"></div>
+<script>
+  // Auto-resize the embedded course-calendar widget (../courses/ posts its height).
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.isofitCalHeight) {
+      var f = document.getElementById('pp-cal');
+      if (f) f.style.height = (e.data.isofitCalHeight + 8) + 'px';
+    }
+  });
+</script>
 <script type="text/babel" src="lib.jsx"></script>
 <script type="text/babel" src="Page.jsx"></script>
 <script type="text/babel">

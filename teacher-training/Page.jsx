@@ -226,76 +226,19 @@ function Paths() {
 
 // ---------- Course dates ----------
 
+// Course dates = the existing Iso Fit course-calendar widget, embedded as-is
+// (../courses/ \u2014 same feed/refresh, single source of maintenance). The widget
+// posts its height to the parent; index.html resizes #pp-cal so there's no inner scroll.
 function Dates() {
-  const [filter, setFilter] = React.useState('All');
-  const [courses, setCourses] = React.useState(COURSES);
-  React.useEffect(() => {
-    fetch(CONFIG.coursesFeed)
-      .then((r) => r.json())
-      .then((d) => { const m = window.mapLiveCourses(d); if (m && m.length) setCourses(m); })
-      .catch(() => {});
-  }, []);
-  const filters = ['All', 'Mat', 'Reformer', 'Comprehensive'];
-  const match = (c) => filter === 'All' || c.track.indexOf(filter) !== -1;
-  const shown = courses.filter(match);
-  const months = [];
-  shown.forEach((c) => { if (!months.includes(c.month)) months.push(c.month); });
-
   return (
-    <Shell id="dates" bg="var(--white)" pad="100px 0">
-      <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24, marginBottom: 36 }}>
-        <div style={{ maxWidth: 620 }}>
-          <Eyebrow>Upcoming courses</Eyebrow>
-          <h2 className="heading-cap" style={{ fontSize: 46, lineHeight: 1.02, margin: '16px 0 12px' }}>Course dates</h2>
-          <p className="lead" style={{ fontSize: 17, margin: 0 }}>Live from our schedule. Reserve your place &mdash; cohorts are intentionally small.</p>
-        </div>
-        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-          {filters.map((f) => (
-            <button key={f} onClick={() => setFilter(f)} className="pp-filter" style={{
-              border: filter === f ? '1.5px solid var(--black)' : '1.5px solid var(--border-strong)',
-              background: filter === f ? 'var(--black)' : 'var(--white)',
-              color: filter === f ? '#fff' : 'var(--fg-2)',
-            }}>{f}</button>
-          ))}
-        </div>
-      </div>
-
-      {months.map((m) => (
-        <div key={m} style={{ marginBottom: 14 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 16, margin: '24px 0 16px' }}>
-            <span style={{ fontFamily: 'var(--font-display)', fontSize: 14, letterSpacing: '.12em', color: 'var(--fg-3)' }}>{m}</span>
-            <span style={{ flex: 1, height: 1, background: 'var(--border)' }} />
-          </div>
-          <div className="pp-grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-            {shown.filter((c) => c.month === m).map((c, i) => {
-              const tint = TRACK_TINT[c.track] || TRACK_TINT['Mat'];
-              return (
-                <article key={i} className="pp-course" style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 22, background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', padding: '22px 24px', boxShadow: 'var(--shadow-sm)' }}>
-                  <div style={{ textAlign: 'center', minWidth: 52 }}>
-                    <div className="heading-cap" style={{ fontSize: 36, lineHeight: 0.9 }}>{c.day}</div>
-                    <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--fg-3)', marginTop: 4 }}>{c.mon}</div>
-                  </div>
-                  <div>
-                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 10 }}>
-                      <span style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '.06em', textTransform: 'uppercase', color: tint.fg, background: tint.bg, padding: '4px 10px', borderRadius: 999 }}>{c.track}</span>
-                      {c.early && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 10.5, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', color: '#7a4d00', background: 'rgba(242,169,0,.16)', padding: '4px 10px', borderRadius: 999 }}><PIcon name="sparkles" size={11} stroke={2} />{c.early}</span>}
-                    </div>
-                    <h3 style={{ fontSize: 16.5, fontFamily: 'var(--font-sans)', fontWeight: 600, lineHeight: 1.32, margin: '0 0 12px' }}>{c.title}</h3>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 16 }}>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--fg-2)' }}><PIcon name="calendar" size={14} />{c.range}</span>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--fg-2)' }}><PIcon name="map-pin" size={14} />{c.loc}{c.lang ? ` \u00b7 ${c.lang}` : ''}</span>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, paddingTop: 14, borderTop: '1px solid var(--border)' }}>
-                      <span className="heading-cap" style={{ fontSize: 19 }}>{c.price}</span>
-                      <a href={c.url || CONFIG.registerUrl} target="_blank" rel="noopener noreferrer" className="pp-btn-primary" style={{ padding: '10px 20px', boxShadow: 'none' }}>Register</a>
-                    </div>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      ))}
+    <Shell id="dates" bg="var(--white)" pad="48px 0">
+      <iframe
+        id="pp-cal"
+        src="../courses/"
+        title="Upcoming Polestar Pilates courses at Iso Fit"
+        scrolling="no"
+        style={{ width: '100%', border: 0, minHeight: 760, display: 'block' }}
+      />
     </Shell>
   );
 }

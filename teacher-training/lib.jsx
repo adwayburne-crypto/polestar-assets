@@ -100,45 +100,10 @@ const FAQS = [
 ];
 
 // ---------- Live wiring (web-studio) ----------
-// CONFIG: edit these three values to retarget the page. registerUrl is only a
-// fallback for courses that have no specific registration link of their own.
+// Course dates are served by the existing Iso Fit calendar widget (embedded from
+// ../courses/), so no course data lives here. CONFIG holds only the contact target.
 const CONFIG = {
-  coursesFeed: '../courses/courses.json',                       // live CRM feed (refreshed every 6h)
-  registerUrl: 'https://www.polestarpilatesasia.com/en/education-overview/',
-  contactUrl: 'mailto:info@polestarpilatesasia.com',
+  contactUrl: 'mailto:info@polestarpilatesasia.com',   // Enquire / Contact buttons
 };
 
-// Map the live courses.json feed into the card shape the Dates section expects.
-// Teacher-training tracks only — exams and cancelled courses are filtered out.
-const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const TITLE_BY_FORMAT = {
-  'Mat': 'Polestar Mat Qualification',
-  'Reformer': 'Polestar Reformer Qualification',
-  'Mat + Reformer': 'Fitness Combo — Mat + Reformer Qualification',
-  'Comprehensive': 'Comprehensive Qualification — Studio + Rehabilitation',
-};
-function mapLiveCourses(feed) {
-  const list = (feed && feed.courses) || [];
-  return list
-    .filter((c) => !c.cancelled && c.format && c.format !== 'Exam' && c.start)
-    .sort((a, b) => new Date(a.start) - new Date(b.start))
-    .map((c) => {
-      const s = new Date(c.start), e = new Date(c.end || c.start);
-      const lang = /\(([^)]*\b(?:English|Cantonese|Mandarin)\b[^)]*)\)/i.exec(c.title);
-      return {
-        month: `${MON[s.getMonth()].toUpperCase()} ${s.getFullYear()}`,
-        day: String(s.getDate()),
-        mon: MON[s.getMonth()],
-        track: c.format,
-        title: TITLE_BY_FORMAT[c.format] || `Polestar ${c.format} Qualification`,
-        range: `${s.getDate()} ${MON[s.getMonth()]} – ${e.getDate()} ${MON[e.getMonth()]} ${e.getFullYear()}`,
-        loc: c.venue || 'Hong Kong',
-        price: c.price || 'Enquire',
-        early: c.early_bird ? (typeof c.early_bird === 'string' ? c.early_bird : 'Early-bird available') : undefined,
-        lang: lang ? lang[1] : undefined,
-        url: c.url || CONFIG.registerUrl,
-      };
-    });
-}
-
-Object.assign(window, { PIcon, PPHOTO, PNAV, WHY, PATHS, COURSES, TRACK_TINT, FAQS, CONFIG, mapLiveCourses });
+Object.assign(window, { PIcon, PPHOTO, PNAV, WHY, PATHS, COURSES, TRACK_TINT, FAQS, CONFIG });
