@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polestar Pilates Teacher Training in Hong Kong | Iso Fit</title>
+<meta name="description" content="Become a globally certified Pilates teacher at Iso Fit — Hong Kong's original Polestar Master Training Centre. Mat, Reformer & Comprehensive certifications, evidence-based and rehab-grounded. View live course dates and register.">
+<link rel="canonical" href="https://isofit.com.hk/education/polestar-pilates-asia/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Polestar Pilates Teacher Training in Hong Kong | Iso Fit">
+<meta property="og:description" content="Globally recognised, rehab-grounded Pilates teacher certification with Hong Kong's original Polestar Master Training Centre — since 2001.">
+<meta property="og:image" content="https://adwayburne-crypto.github.io/polestar-assets/teacher-training/assets/reformer-class-wide.jpg">
+<meta property="og:url" content="https://isofit.com.hk/education/polestar-pilates-asia/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="colors_and_type.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  html,body{margin:0;background:var(--white);font-family:var(--font-sans);scroll-behavior:smooth}
+  *{box-sizing:border-box}
+  a{color:inherit}
+
+  /* ---- Buttons (Iso Fit brand) ---- */
+  .pp-btn-primary,.pp-btn-dark,.pp-btn-ghost-light,.pp-btn-ghost-dark{
+    font-family:var(--font-sans);font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+    font-size:13px;border-radius:999px;padding:13px 24px;cursor:pointer;text-decoration:none;
+    display:inline-flex;align-items:center;border:1.5px solid transparent;
+    transition:background var(--dur-fast),transform var(--dur-fast),opacity var(--dur-fast),color var(--dur-fast);
+  }
+  .pp-btn-lg{padding:16px 30px;font-size:13.5px}
+  .pp-btn-primary{color:var(--black);background:var(--accent);box-shadow:var(--shadow-accent)}
+  .pp-btn-primary:hover{background:var(--accent-hover)}
+  .pp-btn-primary:active{transform:scale(.98);background:var(--accent-press)}
+  .pp-btn-dark{color:#fff;background:var(--black)}
+  .pp-btn-dark:hover{opacity:.86}
+  .pp-btn-dark:active{transform:scale(.98)}
+  .pp-btn-ghost-light{color:#fff;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.42)}
+  .pp-btn-ghost-light:hover{background:rgba(255,255,255,.18)}
+  .pp-btn-ghost-dark{color:var(--fg-1);background:transparent;border-color:var(--border-strong)}
+  .pp-btn-ghost-dark:hover{border-color:var(--black);background:rgba(26,26,26,.03)}
+
+  /* ---- Nav underline ---- */
+  .pp-navlink::after{content:'';position:absolute;left:0;right:100%;bottom:-1px;height:1.5px;background:currentColor;opacity:.7;transition:right var(--dur-med) var(--ease-out)}
+  .pp-navlink:hover::after{right:0}
+
+  /* ---- Cards ---- */
+  .pp-card{transition:box-shadow var(--dur-med) var(--ease-out),transform var(--dur-med) var(--ease-out)}
+  .pp-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+  .pp-course{transition:box-shadow var(--dur-med) var(--ease-out),transform var(--dur-med) var(--ease-out)}
+  .pp-course:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+  .pp-filter{font-family:var(--font-sans);font-size:13px;font-weight:600;padding:9px 18px;border-radius:999px;cursor:pointer;transition:all var(--dur-fast)}
+
+  /* ---- Responsive (web-studio: handoff was desktop-only) ---- */
+  @media (max-width: 900px){
+    .pp-wrap,.pp-header-row,.pp-wrap-trust,.pp-wrap-cta,.pp-herowrap{padding-left:24px !important;padding-right:24px !important}
+    .pp-nav{display:none !important}
+    .pp-why-grid,.pp-faq-grid,.pp-grid-2,.pp-grid-3,.pp-footer-grid{grid-template-columns:1fr !important}
+    .pp-hero-h1{font-size:48px !important}
+    .pp-herowrap{padding-top:104px !important}
+  }
+  @media (max-width: 560px){
+    .pp-wrap,.pp-header-row,.pp-wrap-trust,.pp-wrap-cta,.pp-herowrap{padding-left:18px !important;padding-right:18px !important}
+    .pp-hero-h1{font-size:38px !important}
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="lib.jsx"></script>
+<script type="text/babel" src="Page.jsx"></script>
+<script type="text/babel">
+  function App() {
+    React.useEffect(() => { if (window.lucide) window.lucide.createIcons(); });
+    return <LandingPage hero="a" />;
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

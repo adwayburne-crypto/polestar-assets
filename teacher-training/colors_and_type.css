@@ -1,0 +1,243 @@
+/* ============================================================
+   ISO FIT — Colors & Type
+   Hong Kong's original Pilates & Gyrotonic movement studio (est. 1998)
+   Brand font: Poppins. Primary palette: Sage #b0c8a6, Black #1a1a1a, Gray #807f82,
+   White #ffffff, Cream #f8f5ef. Sage is the brand green / accent. (Logo art uses lime #acc32b.)
+   ============================================================ */
+
+/* Brand body font — Poppins (Brand Bible: "Text - all Poppins") */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+/* Brand display font — Fjalla One. Condensed, single-weight; used for headings /
+   the signature uppercase treatment. Loaded from Google Fonts (web-studio: the
+   handoff self-hosted the .ttf; we serve the identical font from Google instead). */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+:root {
+  /* ---------- PRIMITIVE PALETTE ---------- */
+  /* Logo mark green — appears ONLY inside the logo artwork (sampled #acc32b).
+     NOT part of the working palette; never use as a UI color. */
+  --lime-500: #acc32b;   /* logo mark color only */
+
+  /* Sage — PRIMARY brand color (Brand Bible palette: Sage #b0c8a6) */
+  --sage-700: #5a7350;   /* legible sage for text / eyebrows on white */
+  --sage-600: #8aa67e;   /* darker fill / hover */
+  --sage-500: #b0c8a6;   /* PRIMARY documented brand Sage */
+  --sage-300: #cdddc6;
+  --sage-100: #eaf1e6;
+
+  /* Neutrals */
+  --black:    #1a1a1a;   /* near-black text (Colors source) */
+  --ink:      #000000;
+  --gray-600: #57565a;
+  --gray-500: #807f82;   /* brand gray — logo wordmark / muted text */
+  --gray-400: #a3a2a5;
+  --gray-300: #d4d3d6;
+  --gray-200: #e8e7e9;
+  --cream:    #f8f5ef;   /* warm off-white surface */
+  --white:    #ffffff;
+
+  /* Polestar Yellow — accent reserved for Polestar education content ONLY */
+  --polestar-yellow: #f2a900;
+
+  /* ---------- SEMANTIC TOKENS ---------- */
+  /* Foreground / text */
+  --fg-1: var(--black);     /* primary text & headings */
+  --fg-2: var(--gray-500);  /* secondary / muted text */
+  --fg-3: var(--gray-400);  /* tertiary / captions, disabled */
+  --fg-on-dark: var(--white);
+  --fg-on-lime: var(--black);
+
+  /* Backgrounds / surfaces */
+  --bg-1: var(--white);     /* default page surface */
+  --bg-2: var(--cream);     /* warm alternate section */
+  --bg-3: var(--sage-100);  /* soft sage tint section */
+  --bg-dark: var(--black);  /* dark / dramatic section */
+
+  /* Brand / interactive — Sage is the primary brand green (#b0c8a6) */
+  --accent: var(--sage-500);        /* primary fills, buttons, rules */
+  --accent-hover: var(--sage-600);  /* darker sage on hover */
+  --accent-press: #6f8a63;          /* deeper sage on press */
+  --accent-soft: var(--sage-100);   /* tint backgrounds */
+  --accent-text: var(--sage-700);   /* legible sage for accent TEXT on white */
+  --secondary: var(--gray-500);     /* brand gray #807f82 */
+  --special: var(--polestar-yellow); /* Polestar-only highlight */
+
+  /* Lines & dividers */
+  --border: var(--gray-200);
+  --border-strong: var(--gray-300);
+  --divider-dark: rgba(255,255,255,0.16);
+
+  /* ---------- TYPOGRAPHY ---------- */
+  --font-sans: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Fjalla One', 'Poppins', system-ui, sans-serif;
+
+  /* Type scale (1.250 major-third-ish, tuned) */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-md:   18px;
+  --text-lg:   22px;
+  --text-xl:   28px;
+  --text-2xl:  36px;
+  --text-3xl:  48px;
+  --text-4xl:  64px;
+  --text-5xl:  84px;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.25;
+  --leading-normal: 1.55;
+  --leading-relaxed: 1.7;
+
+  /* Brand headings are frequently UPPERCASE with open tracking */
+  --tracking-cap: 0.08em;   /* uppercase headings / eyebrows / buttons */
+  --tracking-wide: 0.04em;
+  --tracking-normal: 0;
+
+  /* ---------- SPACING (8pt base) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* ---------- RADII ---------- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ---------- SHADOWS (soft, diffuse — never harsh) ---------- */
+  --shadow-sm: 0 1px 2px rgba(26,26,26,0.05), 0 1px 3px rgba(26,26,26,0.04);
+  --shadow-md: 0 4px 12px rgba(26,26,26,0.06), 0 2px 4px rgba(26,26,26,0.04);
+  --shadow-lg: 0 12px 32px rgba(26,26,26,0.10), 0 4px 8px rgba(26,26,26,0.05);
+  --shadow-accent: 0 8px 24px rgba(176,200,166,0.45);
+
+  /* ---------- MOTION ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms;
+  --dur-med: 240ms;
+  --dur-slow: 420ms;
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES
+   ============================================================ */
+.font-sans { font-family: var(--font-sans); }
+
+/* Eyebrow / kicker — small uppercase label above headings */
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-cap);
+  color: var(--accent-text);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: normal;
+  color: var(--fg-1);
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: 0;
+  color: var(--fg-1);
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  line-height: var(--leading-snug);
+  color: var(--fg-1);
+}
+
+h3, .h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  line-height: var(--leading-snug);
+  color: var(--fg-1);
+}
+
+h4, .h4 {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-snug);
+  color: var(--fg-1);
+}
+
+/* Uppercase section heading — the brand's signature heading treatment */
+.heading-cap {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  color: var(--fg-1);
+}
+
+p, .body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--fg-1);
+}
+
+.body-lg {
+  font-size: var(--text-md);
+  line-height: var(--leading-relaxed);
+}
+
+.lead {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-relaxed);
+  color: var(--fg-2);
+}
+
+.small, small {
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--fg-2);
+}
+
+.caption {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  color: var(--fg-3);
+}
+
+/* Quote / testimonial — light weight, generous leading */
+.quote {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-snug);
+  color: var(--fg-1);
+}
