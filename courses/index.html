@@ -225,6 +225,15 @@
 
   window.addEventListener("resize", reportHeight);
   window.addEventListener("load", reportHeight);
+
+  // Report per-course "Register" clicks to the parent page so it can fire a GA4 conversion event.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a.cta");
+    if (!a || window.parent === window) return;
+    var card = a.closest(".card");
+    var title = card && card.querySelector("h3") ? card.querySelector("h3").textContent.trim() : "";
+    try { window.parent.postMessage({ isofitRegister: { url: a.href, title: title } }, "*"); } catch (err) {}
+  }, true);
 </script>
 </body>
 </html>
