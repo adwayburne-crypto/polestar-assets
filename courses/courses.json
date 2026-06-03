@@ -1,0 +1,132 @@
+{
+  "generated_at": "2026-06-03T08:00:03+08:00",
+  "count": 8,
+  "courses": [
+    {
+      "id": "3977186000059426116",
+      "title": "S17 - Polestar Pilates Comprehensive Qualification Course - Iso Fit HK - Jun 2026 to Oct 2026",
+      "format": "Comprehensive",
+      "venue": "Iso Fit HK",
+      "venue_name": "Iso Fit HongKong - IS",
+      "city": "Hong Kong",
+      "start": "2026-06-06T09:00:00+08:00",
+      "end": "2026-10-10T18:00:00+08:00",
+      "price": "HK$36,732",
+      "url": "https://www.polestarpilatesasia.com/en/s17-polestar-pilates-comprehensive-qualification-course-iso-fit-hk-jun-2026-to-oct-2026/",
+      "early_bird": null,
+      "status": "Published",
+      "cancelled": false
+    },
+    {
+      "id": "3977186000059935452",
+      "title": "Polestar Pilates Exam - Iso Fit Hong Kong - Jun 2026",
+      "format": "Exam",
+      "venue": "Iso Fit HK",
+      "venue_name": "Iso Fit HongKong - IS",
+      "city": "Hong Kong",
+      "start": "2026-06-12T09:00:00+08:00",
+      "end": "2026-06-14T18:00:00+08:00",
+      "price": null,
+      "url": "https://www.polestarpilatesasia.com/en/polestar-pilates-exams-hong-kong-jun-2026/",
+      "early_bird": null,
+      "status": "In Progress",
+      "cancelled": false
+    },
+    {
+      "id": "3977186000059453128",
+      "title": "Polestar Pilates Reformer Qualification Course – Yoga Senses Hong Kong – Jun 2026 to Aug 2026 (English)",
+      "format": "Reformer",
+      "venue": "Yoga Senses HK",
+      "venue_name": "Yoga Senses Hong Kong - HYS",
+      "city": "Hong Kong",
+      "start": "2026-06-20T09:00:00+08:00",
+      "end": "2026-08-08T18:00:00+08:00",
+      "price": "HK$17,357",
+      "url": "https://www.polestarpilatesasia.com/en/polestar-pilates-reformer-qualification-course-yoga-senses-hong-kong-jun-2026-to-aug-2026-english/",
+      "early_bird": null,
+      "status": "Published",
+      "cancelled": false
+    },
+    {
+      "id": "3977186000059453425",
+      "title": "Polestar Pilates Fitness Combo (Mat + Reformer) – Reformer in Yoga Senses HK & Mat in Iso Fit HK: Jun – Aug 2026",
+      "format": "Mat + Reformer",
+      "venue": "Iso Fit HK",
+      "venue_name": "Iso Fit HongKong - IS",
+      "city": "Hong Kong",
+      "start": "2026-06-20T09:00:00+08:00",
+      "end": "2026-08-29T18:00:00+08:00",
+      "price": "HK$26,802",
+      "url": "https://www.polestarpilatesasia.com/en/fitness-combo-ref-mat-reformer-in-yoga-senses-hk-mat-in-iso-fit-hk-jun-aug-2026/",
+      "early_bird": null,
+      "status": "Published",
+      "cancelled": false
+    },
+    {
+      "id": "3977186000059420116",
+      "title": "S17 - Polestar Pilates Mat Qualification Course - Iso Fit HK - Jul - Aug 2026",
+      "format": "Mat",
+      "venue": "Iso Fit HK",
+      "venue_name": "Iso Fit HongKong - IS",
+      "city": "Hong Kong",
+      "start": "2026-07-04T09:00:00+08:00",
+      "end": "2026-08-30T18:00:00+08:00",
+      "price": "HK$14,128",
+      "url": "https://www.polestarpilatesasia.com/en/s17-polestar-pilates-mat-qualification-course-iso-fit-hk-jul-aug-2026/",
+      "early_bird": null,
+      "status": null,
+      "cancelled": false
+    },
+    {
+      "id": "3977186000068897027",
+      "title": "Polestar Pilates Reformer Qualification Course - Iso Fit HK: Jul to Sep 2026",
+      "format": "Reformer",
+      "venue": "Iso Fit HK",
+      "venue_name": "Iso Fit HongKong - IS",
+      "city": "Hong Kong",
+      "start": "2026-07-25T09:00:00+08:00",
+      "end": "2026-09-19T18:00:00+08:00",
+      "price": "HK$17,357",
+      "url": "https://www.polestarpilatesasia.com/en/polestar-pilates-reformer-qualification-course-iso-fit-hk-jul-to-sep-2026/",
+      "early_bird": null,
+      "status": null,
+      "cancelled": false
+    },
+    {
+      "id": "3977186000073404010",
+      "title": "Polestar Pilates Reformer Qualification Course – Iso Fit HK: Sep to Nov 2026",
+      "format": "Reformer",
+      "venue": "Iso Fit HK",
+      "venue_name": "Iso Fit HongKong - IS",
+      "city": "Hong Kong",
+      "start": "2026-09-05T09:00:00+08:00",
+      "end": "2026-10-31T18:00:00+08:00",
+      "price": "HK$17,357",
+      "url": "https://www.polestarpilatesasia.com/en/polestar-pilates-reformer-qualification-course-iso-fit-hk-sep-to-nov-2026/",
+      "early_bird": {
+        "pct": 10,
+        "until": "2026-06-05"
+      },
+      "status": null,
+      "cancelled": false
+    },
+    {
+      "id": "3977186000071675137",
+      "title": "Polestar Pilates Comprehensive Qualification Course - Iso Fit HK - Oct 2026 to Jan 2027",
+      "format": "Comprehensive",
+      "venue": "Iso Fit HK",
+      "venue_name": "Iso Fit HongKong - IS",
+      "city": "Hong Kong",
+      "start": "2026-10-03T09:00:00+08:00",
+      "end": "2027-01-16T18:00:00+08:00",
+      "price": "HK$36,732",
+      "url": "https://www.polestarpilatesasia.com/en/polestar-pilates-comprehensive-qualification-course-iso-fit-hk-oct-2026-to-jan-2027/",
+      "early_bird": {
+        "pct": 10,
+        "until": "2026-07-03"
+      },
+      "status": null,
+      "cancelled": false
+    }
+  ]
+}
